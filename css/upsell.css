@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+  
+  .offer-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .pricing {
+    margin-bottom: 20px;
+  }
+  
+  .old-price {
+    font-size: 1.2em;
+    color: #888;
+    text-decoration: line-through;
+    margin-right: 10px;
+  }
+  
+  .new-price {
+    font-size: 1.5em;
+    color: #ff3131;
+    font-weight: bold;
+  }
+  
+  .btn-cta {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #ff3131;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(255, 49, 49, 0.5);
+    position: relative;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .btn-cta::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: rgba(255, 49, 49, 0.3);
+    border-radius: 10px;
+    z-index: -1;
+    transition: opacity 0.3s;
+    opacity: 0;
+  }
+  
+  .btn-cta:hover {
+    background-color: #e02a2a;
+    box-shadow: 0 0 25px rgba(255, 49, 49, 0.7);
+  }
+  
+  .btn-cta:hover::before {
+    opacity: 1;
+  }
+  
+  .container:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Animação do balão flutuante de prova social */
+  .floating-bubble {
+    position: absolute;
+    top: 10px; /* Ajuste para garantir que o balão fique visível */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff3131;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(255, 49, 49, 0.4);
+    animation: float 3s ease-in-out infinite;
+    z-index: 10; /* Garante que o balão fique acima de outros elementos */
+  }
+  
+  
+  /* Animação de pulsar no botão */
+  @keyframes pulse {
+    0% { box-shadow: 0 0 20px rgba(255, 49, 49, 0.5); }
+    50% { box-shadow: 0 0 30px rgba(255, 49, 49, 0.7); }
+    100% { box-shadow: 0 0 20px rgba(255, 49, 49, 0.5); }
+  }
+  
+  /* Animação do balão flutuante */
+  @keyframes float {
+    0%, 100% {
+      transform: translate(-50%, -10px);
+    }
+    50% {
+      transform: translate(-50%, 10px);
+    }
+  }
+  
